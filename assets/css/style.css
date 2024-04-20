@@ -26,12 +26,10 @@ body{
 {
     width: 100%;
     height: 100%;
-    /*background-attachment: fixed;
-    background-position: center;
-    background-size: cover; */
     object-fit: cover;
     pointer-events: none;
     position: absolute;
+
 }
 
 nav
@@ -84,16 +82,6 @@ nav
     transition: 0.3s ease-in-out;
     backdrop-filter: blur(5px);
 }
-.presentation::before
-{
-    content: "";
-    position: absolute;
-    background: linear-gradient(to bottom, transparent, #14101b);
-    width: 100%;
-    height: 100px;
-    top: -100px;
-    z-index: 2;
-}
 .presentation
 {
     position: relative;
@@ -107,7 +95,7 @@ h1 {
     font-size: 3.5rem;
     letter-spacing: 2px;
     color: rgb(255, 255, 255);
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -122,7 +110,9 @@ h1>span {
     justify-content: center;
     gap: 1rem;
     background: #000000;
-    padding: 20px;
+    padding: 100px;
+
+
 }
 .input-box
 {
@@ -144,4 +134,34 @@ input-box span
     color: #000000;
     font-size: 1rem;
     font-weight: 500;
+}
+.easy_step::before{
+}
+.easy_step {
+    background: rgb(40, 32, 41);
+}
+.tree_easy_steps {
+    text-align: center;
+    padding-top: 75px;
+}
+.tree_easy_steps span {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.tree_easy_steps h2 {
+    font-size: 2rem;
+}
+.easy_container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.easy_container .box {
+    text-align: center;
+    padding: 20px;
+}
+.easy_container .box .img_box {
+    height: 150px;
 }
