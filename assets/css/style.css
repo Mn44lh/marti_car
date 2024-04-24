@@ -10,6 +10,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: antiquewhite;
+    background: rgb(33, 27, 39);
 }
 
 .illustration
@@ -169,16 +170,96 @@ input-box span
     transform: scale(1.35);
     transition: transform 0.3s ease-in-out;
 }
+.type {
+    background: rgb(33, 27, 39);
+    padding-top: 75px;
+}
+.top_type h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+.type_conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    margin: 2rem 6rem;
+    padding-top: 3rem;
+}
+.type_conteneur .box_type {
+    flex: 1 1 2rem;
+    position: relative;
+    height: 350px;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+.type_conteneur .box_type img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.type_conteneur .box_type img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.type_conteneur .box_type h3 {
+    position: absolute;
+    left: 14rem;
+    bottom: 1rem;
+    font-weight: 500;
+    color: #000000;
+    font-size: 1rem;
+    background: rgb(199, 162, 4);
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+.type_conteneur .box_type .btn_c {
+    display: flex;
+    justify-content: center;
+}
+.type_conteneur .box_type .btn_vdl {
+    display: flex;
+    justify-content: center;
+}
+.about {
+    background: linear-gradient(to top, #000000, rgb(33, 27, 39));
+}
+.top_about {
+    text-align: center;
+    padding-top: 75px;
+}
+.top_about p {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.top_about h2 {
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .service {
     text-align: center;
     padding-top: 75px;
     background: rgb(33, 27, 39);
 }
-.service p {
+.top p {
     font-weight: 500;
     text-transform: uppercase;
 }
-.service h2 {
+.top h2 {
     font-size: 2rem;
 }
 .service_container {
