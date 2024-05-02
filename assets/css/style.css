@@ -282,7 +282,7 @@ input-box span
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    object-fit: cover;
+    /* object-fit: cover; */
     object-position: center;
 }
 .service_container .box_service p {
