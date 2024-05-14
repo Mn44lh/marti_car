@@ -239,8 +239,9 @@ h1>span {
     text-align: center;
     padding-top: 100px;
 }
-.top_about h2 {
+.top_avis h2 {
     font-size: 2rem;
+    text-align: center;
 }
 .avis_conteneur {
     display: grid;
@@ -262,8 +263,27 @@ h1>span {
     color: white;
     margin-bottom: 25px;
 }
+.box_avis p {
+    margin-top: 15px;
+}
 
+/* ---------- Vidéo ---------- */
 
+.video {
+    padding-top: 85px;
+    text-align: center;
+    background-color: #000000;
+}
+.video_presentation h2 {
+    font-size: 2rem;
+    color: rgb(199, 162, 4);
+}
+
+.video video {
+    align-content: center;
+    height: 500px;
+    margin-top: 75px;
+}
 
 
 
