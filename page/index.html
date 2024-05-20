@@ -16,7 +16,7 @@
                     <li class="link"><a href="./a_propos">A propos</a></li>
                     <li class="link"><a href="./citadines.html">Citadines</a></li>
                     <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
-                    <li class="link"><a href="./contact.html">Contact</a></li>
+                    <li class="link"><a href="./connexion.html" class="connexion_link">Connexion</a></li>
                 </ul>
             </nav>
         </header>
@@ -143,10 +143,35 @@
 
        <section class="contact" id="contact">
            <article class="contact_formulaire">
-               <img src="../assets/img/_%20(1).jpeg" alt="">
+               <h3>Contactez-nous</h3>
+               <form method="post" action="backend/traitement">
+                   <label for="name" class="hidden">Nom</label>
+                   <input type="text" name="name" id="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50"/>
+                   <label for="email" class="hidden">Email</label>
+                   <input type="email" name="email" id="email" placeholder="Entrez votre email" required minlength="10" maxlength="50"/>
+                   <label for="phone" class="hidden">Number</label>
+                   <input type="tel" name="phone" id="phone" placeholder="Entrez votre numéro de téléphone" required/>
+                   <label for="subject" class="hidden">Email</label>
+                   <input type="text" name="subject" id="subject" placeholder="Entrez le sujet" required/>
+                   <label for="textarea" class="hidden">Zone de texte</label>
+                   <textarea name="textarea" id="textarea" placeholder="Entrez votre message" required></textarea>
+                   <input type="submit" name ="" class ="btn_contact">
+               </form>
            </article>
        </section>
 
+    <!-- ------------------------------------- Footer ------------------------------------------ -->
 
+        <footer>
+            <article class="footer">
+                <h2>MartiCar</h2>
+                <ul class="footerlink">
+                    <li class="link"><a href="./a_propos">A propos</a></li>
+                    <li class="link"><a href="./citadines.html">Citadines</a></li>
+                    <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+                    <li class="link"><a href="./connexion.html">Connexion</a></li>
+                </ul>
+            </article>
+        </footer>
     </body>
 </html>
