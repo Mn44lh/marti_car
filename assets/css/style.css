@@ -10,8 +10,9 @@
 body{
     font-family: 'Poppins', sans-serif;
     color: antiquewhite;
-    background: rgb(33, 27, 39);
+    background: rgb(33, 27, 39);;
 }
+
 
 /* ---------- Navbar ---------- */
 
@@ -58,6 +59,11 @@ nav
     color: rgb(255, 255, 255);
     border-radius: 20px;
 }
+.connexion_link {
+    background-color: rgb(199, 162, 4);
+    padding: 6px 15px;
+    border-radius: 20px;
+}
 .link a:hover
 {
     background: rgb(31, 25, 31);
@@ -92,7 +98,6 @@ nav
     object-fit: cover;
     pointer-events: none;
     position: absolute;
-
 }
 h1 {
     z-index: 1;
@@ -110,12 +115,12 @@ h1>span {
     font-size: 3.5rem;
 }
 .container_reservation form {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background: linear-gradient(to top, rgb(33, 27, 39), #000000, rgb(33, 27, 39));
+    background: linear-gradient(to top, rgb(33, 27, 39), #000000, rgb(30, 20, 29));
     height: 50%;
     padding: 100px;
 }
@@ -125,7 +130,20 @@ h1>span {
     display: flex;
     flex-direction: column;
 }
-
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: antiquewhite;
+}
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(31, 25, 31);
+    color: white;
+    font-size: 1rem;
+}
 .container_reservation .btn_reservation
 {
     flex: 1 1 7rem;
@@ -285,23 +303,97 @@ h1>span {
 
 /* ---------- Contact ---------- */
 
-.contact_formulaire img {
+.contact {
+    background-color: black;
+    padding: 85px 0;
+}
+.contact_formulaire {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.hidden {
+    display: none;
+}
+.contact_formulaire h3 {
+    font-size: 2rem;
+    color: rgb(33, 27, 39);
+    margin-top: 45px;
+}
+.contact_formulaire form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+    margin-top: 30px;
+}
+.contact_formulaire form input {
+    width: 47%;
+
+}
+.contact_formulaire form input,
+.contact_formulaire form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(199, 162, 4);
+    transition: 0.2s;
+}
+.contact_formulaire form textarea {
     width: 100%;
-    height: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
 }
 
+.contact_formulaire form .btn_contact {
+    width: 192px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(199, 162, 4);
+    color: rgb(33, 27, 39);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto 25px auto;
+}
 
+/* ---------- Footer ---------- */
 
+.footer {
+    background: linear-gradient(to top, rgb(33, 27, 39), black);
+}
+.footer h2 {
+    text-align: center;
+}
+.footerlink {
 
+    padding: 30px 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerlink .link a {
+    color: rgb(199, 162, 4);
+}
 
-
-
-
+/* ---------- Citadines ---------- */
 
 .service {
     text-align: center;
-    padding-top: 75px;
-    background: rgb(33, 27, 39);
+    padding-top: 175px;
 }
 .top h2 {
     font-size: 2rem;
@@ -314,7 +406,8 @@ h1>span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,auto));
     gap: 2.5rem;
-    margin: 100px 50px 20px;
+    margin: 50px 45px;
+
 }
 .service_container .box_service {
     padding: 7px;
@@ -330,7 +423,7 @@ h1>span {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    /* object-fit: cover; */
+     object-fit: cover;
     object-position: center;
 }
 .service_container .box_service p {
@@ -366,4 +459,141 @@ h1>span {
 .service_container .box_service .btn_service:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* ---------- Voitures de luxe ---------- */
+
+.services {
+    text-align: center;
+    padding-top: 175px;
+}
+.tops h2 {
+    font-size: 2rem;
+}
+.tops p {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.service_containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+    gap: 2.5rem;
+    margin: 50px 45px;
+}
+.service_containers .box_services {
+    padding: 7px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+    background:#000000;
+}
+.service_containers .box_services .box_service_imgs {
+    width: 100%;
+    height: 200px;
+}
+.service_containers .box_services .box_service_imgs img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+.service_containers .box_services p {
+    padding: 0 5px;
+    border: 1px solid;
+    width: 18%;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+    color: rgb(255, 204, 2);
+}
+.service_containers .box_services h4 {
+    font-weight: 500;
+}
+.service_containers .box_services h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.2rem 0 0.5rem;
+    color: rgb(255, 204, 2);
+}
+.service_containers .box_services h3 span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+.service_containers .box_services .btn_services {
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 204, 2);
+    color: #14101b;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+.service_containers .box_services .btn_services:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* ---------- Login ---------- */
+
+.connexion {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.imgConnexion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.imgConnexion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.connexion_container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(20, 16, 27, 0.8); /* Ajouter une transparence pour le conteneur */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: -20px 20px 10px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.connexion_container h2 {
+    color: rgb(255, 204, 0);
+    margin-bottom: 20px;
+}
+.input-boxs {
+    margin-bottom: 20px;
+}
+.input-boxs label {
+    display: block;
+    margin-bottom: 5px;
+    color: antiquewhite;
+}
+.input-boxs input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(31, 25, 31);
+    color: white;
+    font-size: 1rem;
+}
+.btn_connexion {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(255, 204, 0);
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn_connexion:hover {
+    background: rgb(199, 162, 4);
 }
