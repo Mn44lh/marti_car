@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>MartiCar - Connexion</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
+    </head>
+
+    <body>
 
 <!-- ---------------------------- Navbar ---------------------------------- -->
 
-<header>
-    <nav role="navigation">
-        <div class="navbarLogo"><a href="index.html">MartiCar</a></div>
-        <ul class="navbarlink">
-            <li class="link"><a href="./a_propos">A propos</a></li>
-            <li class="link"><a href="./citadines.html">Citadines</a></li>
-            <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
-            <li class="link"><a href="./connexion.html" class="connexion_link">Connexion</a></li>
-        </ul>
-    </nav>
-</header>
+        <header>
+            <nav role="navigation">
+                <div class="navbarLogo"><a href="index.html">MartiCar</a></div>
+                <ul class="navbarlink">
+                    <li class="link"><a href="./a_propos">A propos</a></li>
+                    <li class="link"><a href="./citadines.html">Citadines</a></li>
+                    <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+                    <li class="link"><a href="./connexion.html" class="connexion_link">Connexion</a></li>
+                </ul>
+            </nav>
+        </header>
 
 <!-- --------------------------- Login ---------------------------------- -->
 
-<section class="connexion">
-    <article class="imgConnexion">
-        <img class="imgConnexion" src="../assets/img/devin-pickell-EOY81JYDoi8-unsplash.jpg" alt="">
-    </article>
-    <article class="connexion_container">
-        <h2>Connexion</h2>
-        <form method="post" action="backend/traitement">
-            <aside class="input-boxs">
-                <label for="username">Nom d'utilisateur</label>
-                <input type="text" id="username" name="username" required>
-            </aside>
-            <aside class="input-boxs">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required>
-            </aside>
-            <button type="submit" class="btn_connexion">Se connecter</button>
-        </form>
-    </article>
-</section>
-</body>
+        <section class="connexion">
+            <article class="imgConnexion">
+                <img class="imgConnexion" src="../assets/img/devin-pickell-EOY81JYDoi8-unsplash.jpg" alt="">
+            </article>
+            <article class="connexion_container">
+                <h2>Connexion</h2>
+                <form method="post" action="backend/traitement">
+                    <aside class="input-boxs">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text" id="username" name="username" required>
+                    </aside>
+                    <aside class="input-boxs">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" required>
+                    </aside>
+                    <button type="submit" class="btn_connexion">Se connecter</button>
+                </form>
+            </article>
+        </section>
+
+<!-- ------------------------------------- Footer ------------------------------------------ -->
+
+        <footer>
+            <article class="footer">
+                <h2>MartiCar</h2>
+                <ul class="footerlink">
+                    <li class="link"><a href="./a_propos">A propos</a></li>
+                    <li class="link"><a href="./citadines.html">Citadines</a></li>
+                    <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+                    <li class="link"><a href="./connexion.html">Connexion</a></li>
+                </ul>
+                <p>&copy; 2024 MartiCar. Tous droits réservés.</p>
+            </article>
+        </footer>
+    </body>
 </html>
