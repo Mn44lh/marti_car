@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap') ;
 
+html {
+    scroll-behavior: smooth;
+}
 *
 {
     margin: 0;
@@ -21,6 +24,7 @@ nav
     position: fixed;
     top: 0;
     left: 0;
+    height: 60px;
     width: 100%;
     padding: 30px 100px;
     display: flex;
@@ -48,11 +52,11 @@ nav
     display: flex;
     gap: 20px;
 }
-.link
+.navbarlink .link
 {
     list-style: none;
 }
-.link a
+.navbarlink .link a
 {
     text-decoration: none;
     padding: 6px 15px;
@@ -64,7 +68,7 @@ nav
     padding: 6px 15px;
     border-radius: 20px;
 }
-.link a:hover
+.navbarlink .link a:hover
 {
     background: rgb(31, 25, 31);
     color: rgb(199, 162, 4);
@@ -114,19 +118,31 @@ h1>span {
     color: rgb(255, 204, 0);
     font-size: 3.5rem;
 }
+.container_reservation::before {
+    content: " ";
+    height: 100px;
+    background: linear-gradient(to top, rgb(30, 20, 29), transparent);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
 .container_reservation form {
+
+    background: linear-gradient(to top, rgb(33, 27, 39), #000000, rgb(30, 20, 29));
+    height: 400px;
+    padding: 100px;
+}
+.wrapper{
+    gap: 1rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    background: linear-gradient(to top, rgb(33, 27, 39), #000000, rgb(30, 20, 29));
-    height: 50%;
-    padding: 100px;
 }
 .input-box
 {
-    flex: 1 1 7rem;
+    flex: 1 ;
     display: flex;
     flex-direction: column;
 }
@@ -144,10 +160,19 @@ h1>span {
     color: white;
     font-size: 1rem;
 }
-.container_reservation .btn_reservation
-{
-    flex: 1 1 7rem;
-    padding: 10px 35px;
+#location {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(31, 25, 31);
+    color: white;
+    font-size: 1rem;
+}
+ .btn_reservation {
+    margin-top: 1rem;
+    width: 100%;
+     padding: 10px 35px;
     border: none;
     border-radius: 3.5rem;
     background: rgb(255, 204, 0);
@@ -157,7 +182,6 @@ h1>span {
 }
 
 /* ---------- A propos de nous ---------- */
-
 .easy_step {
     background: rgb(33, 27, 39);
 }
@@ -183,7 +207,7 @@ h1>span {
     text-align: center;
     padding: 50px;
 }
-.img_box {
+.img_box{
     height: 100px;
     background: transparent;
     border-radius: 0.5rem;
@@ -373,20 +397,60 @@ h1>span {
 /* ---------- Footer ---------- */
 
 .footer {
-    background: linear-gradient(to top, rgb(33, 27, 39), black);
+    background-color: rgb(33, 27, 39);
+    text-align: center;
+    padding: 20px 0;
 }
 .footer h2 {
     text-align: center;
 }
 .footerlink {
-
-    padding: 30px 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.footerlink .link  {
+    display: inline-block;
+    margin: 20px 10px;
 }
 .footerlink .link a {
+    text-align: center;
+    text-decoration: none;
     color: rgb(199, 162, 4);
+}
+.footer p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ---------- Footer citadines et voitures de luxe ---------- */
+
+
+.footers {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+.footers h2 {
+    text-align: center;
+}
+.footerlinks {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.footerlinks .link  {
+    display: inline-block;
+    margin: 20px 10px;
+}
+.footerlinks .link a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(199, 162, 4);
+}
+.footers p{
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* ---------- Citadines ---------- */
