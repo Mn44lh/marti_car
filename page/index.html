@@ -30,26 +30,41 @@
         </section>
 
         <section class="container_reservation" id="container_reservation">
-            <form action="">
-                <article class="input-box">
-                    <aside>
-                        <label for="location">Location</label>
-                        <input type="search" id="location" name="" placeholder="Search Place" />
-                    </aside>
-                </article>
-                <article class="input-box">
-                    <aside>
-                        <label for="date_depart">Date de départ</label>
-                        <input type="date" id="date_depart" name="" required="">
-                    </aside>
-                </article>
-                <article class="input-box">
-                    <aside>
-                        <label for="date_retour">Date de retour</label>
-                        <input type="date" id="date_retour" name="" required="">
-                    </aside>
-                </article>
-                <input type="submit" name="" class="btn_reservation">
+            <form method="post" action="backend/traitement">
+                <div class="wrapper">
+                    <article class="input-box">
+                        <aside>
+                            <label for="location">Lieu de location</label>
+                            <select name="location" id="location" required="">
+                                <option class="loc" value="" disabled selected>Choisir le lieu de la location</option>
+                                <optgroup class="loc" label="Belgique"></optgroup>
+                                <option class="loc" >Liège</option>
+                                <option class="loc" >Namur</option>
+                                <option class="loc" >Bruxelles</option>
+                                <option class="loc" >Ostende</option>
+                                <optgroup class="loc" label="France"></optgroup>
+                                <option class="loc" >Paris</option>
+                                <option class="loc" >Marseille</option>
+                                <option class="loc" >Nice</option>
+                                <option class="loc" >Bordeaux</option>
+
+                            </select>
+                        </aside>
+                    </article>
+                    <article class="input-box">
+                        <aside>
+                            <label for="date_depart">Date de départ</label>
+                            <input type="date" id="date_depart" name="" required="">
+                        </aside>
+                    </article>
+                    <article class="input-box">
+                        <aside>
+                            <label for="date_retour">Date de retour</label>
+                            <input type="date" id="date_retour" name="" required="">
+                        </aside>
+                    </article>
+                </div>
+                <button type="submit" name="" class="btn_reservation ">Voir les véhicules</button>
             </form>
         </section>
 
@@ -113,7 +128,7 @@
             </div>
             <div class="avis_conteneur">
                 <div class="box_avis">
-                    <img class="img_avis" src="../assets/img/img_homme(1).jpeg" alt="">
+                    <img class="img_avis" src="../assets/img/Capture%20d’écran%202024-05-24%20à%2023.27.28.png" alt="">
                     <h3>Sébastien L.L.</h3>
                     <p>Le personnel est très accueillant et professionnel. Ils ont traité ma réservation rapidement et efficacement. La voiture elle-même était en excellent état et propre à l'intérieur et à l'extérieur. Elle correspondait parfaitement à la description qui m'avait été donnée lors de la réservation.  </p>
                 </div>
@@ -123,7 +138,7 @@
                     <p>J'ai récemment eu une expérience très positive avec MartiCar lors de ma récente location de voiture pour un voyage d'affaires. Le processus de réservation en ligne était simple et intuitif, ce qui m'a permis de sélectionner facilement le véhicule qui correspondait le mieux à mes besoins.</p>
                 </div>
                 <div class="box_avis">
-                    <img class="img_avis" src="../assets/img/img_homme(2).jpeg" alt="">
+                    <img class="img_avis" src="../assets/img/Antoine.png" alt="">
                     <h3>Antoine D.</h3>
                     <p>Lorsque je suis arrivé au bureau de MartiCar pour récupérer ma voiture de location, j'ai été chaleureusement accueilli par un personnel courtois et professionnel. Ils ont rapidement traité ma réservation et ont pris le temps de répondre à toutes mes questions concernant le contrat de location et les détails du véhicule.</p>
                 </div>
@@ -166,11 +181,13 @@
             <article class="footer">
                 <h2>MartiCar</h2>
                 <ul class="footerlink">
+                    <li class="link"><a href="#">Accueil</a></li>
                     <li class="link"><a href="./a_propos">A propos</a></li>
                     <li class="link"><a href="./citadines.html">Citadines</a></li>
                     <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
                     <li class="link"><a href="./connexion.html">Connexion</a></li>
                 </ul>
+                <p>&copy; 2024 MartiCar. Tous droits réservés.</p>
             </article>
         </footer>
     </body>
