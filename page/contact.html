@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>MartiCar - A propos</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+
+  <body>
+
+<!-- ------------------------ Navbar -------------------------- -->
+
+    <header>
+      <nav role="navigation">
+        <div class="navbarLogo"><a href="index.html">MartiCar</a></div>
+        <ul class="navbarlink">
+          <li class="link"><a href="./citadines.html">Citadines</a></li>
+          <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+          <li class="link"><a href="./contact.html">Contact</a></li>
+          <li class="link"><a href="./connexion.html" class="connexion_link">Connexion</a></li>
+        </ul>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <img src="../assets/img/car-regular-24.png" alt="Menu">
+        </label>
+        <aside class="sidebar">
+          <ul>
+            <li><a href="./citadines.html">Citadines</a></li>
+            <li><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./connexion.html" class="connexion_link">Connexion</a></li>
+          </ul>
+        </aside>
+      </nav>
+    </header>
+
+    <!-- ----------------------- service client -------------------------- -->
+
+    <section class="sup_client" id="sup_client">
+      <h2>Support client</h2>
+      <h4>Comment pouvons-nous vous aider ?</h4>
+      <p>Nous sommes disponibles du lundi au samedi de 9h à 18h.</p>
+    </section>
+
+    <!-- ----------------------- Formulaire de contact -------------------------- -->
+
+    <section class="contact" id="contact">
+      <article class="contact_formulaire">
+        <h3>Contactez-nous</h3>
+        <form method="post" action="backend/traitement">
+          <label for="name" class="hidden">Nom</label>
+          <input type="text" name="name" id="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50"/>
+          <label for="email" class="hidden">Email</label>
+          <input type="email" name="email" id="email" placeholder="Entrez votre email" required minlength="10" maxlength="50"/>
+          <label for="phone" class="hidden">Number</label>
+          <input type="tel" name="phone" id="phone" placeholder="Entrez votre numéro de téléphone" required/>
+          <label for="subject" class="hidden">Email</label>
+          <input type="text" name="subject" id="subject" placeholder="Entrez le sujet" required/>
+          <label for="textarea" class="hidden">Zone de texte</label>
+          <textarea name="textarea" id="textarea" placeholder="Entrez votre message" required></textarea>
+          <input type="submit" name ="" class ="btn_contact">
+        </form>
+      </article>
+    </section>
+
+    <!-- ------------------------ Footer --------------------------- -->
+
+    <footer>
+      <article class="footer_c">
+        <h2>MartiCar</h2>
+        <ul class="footerlink_c">
+          <li class="link"><a href="./citadines.html">Citadines</a></li>
+          <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+          <li class="link"><a href="./contact.html">Contact</a></li>
+          <li class="link"><a href="./connexion.html">Connexion</a></li>
+        </ul>
+        <p>&copy; 2024 MartiCar. Tous droits réservés.</p>
+      </article>
+    </footer>
+  </body>
+</html>
