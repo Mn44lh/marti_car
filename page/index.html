@@ -11,13 +11,25 @@
     <!-- -------------------------------- navbar ------------------------------------ -->
         <header>
             <nav role="navigation">
-                <div class="navbarLogo"><a href="index.html">MartiCar</a></div>
+                <article class="navbarLogo"><a href="index.html">MartiCar</a></article>
                 <ul class="navbarlink">
-                    <li class="link"><a href="./a_propos">A propos</a></li>
                     <li class="link"><a href="./citadines.html">Citadines</a></li>
                     <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+                    <li class="link"><a href="./contact.html">Contact</a></li>
                     <li class="link"><a href="./connexion.html" class="connexion_link">Connexion</a></li>
                 </ul>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <img src="../assets/img/car-regular-24.png" alt="Menu">
+                </label>
+                <div class="sidebar">
+                   <ul>
+                        <li><a href="./citadines.html">Citadines</a></li>
+                        <li><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="./connexion.html" class="connexion_link">Connexion</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <!-- ------------------------------ Présentation --------------------------------- -->
@@ -104,41 +116,39 @@
             <article class="top_type">
                 <h2>Choisissez le type de voiture</h2>
             </article>
-            <!-- conteneur voitures -->
+
             <article class="type_conteneur">
                 <aside class="box_type">
+                    <h3>Citadines</h3>
                     <a href="./citadines.html">
                         <img src="../assets/img/audi%20a5.jpg" alt="">
-                        <h3>Citadines</h3>
                     </a>
                 </aside>
-
                 <aside class="box_type">
+                    <h3>Voitures de luxe</h3>
                     <a href="./voiture_de_luxe.html">
                         <img src="../assets/img/Audi%20r8.jpg" alt="">
-                        <h3>Voitures de luxe</h3>
                     </a>
                 </aside>
             </article>
         </section>
+
     <!-- ----------------------------------- Avis clients --------------------------------------- -->
+
         <section class="avis" id="avis">
             <div class="top_avis">
                 <h2>Nos expériences clients<br> Ce qu'ils ont aimé</h2>
             </div>
             <div class="avis_conteneur">
                 <div class="box_avis">
-                    <img class="img_avis" src="../assets/img/Capture%20d’écran%202024-05-24%20à%2023.27.28.png" alt="">
                     <h3>Sébastien L.L.</h3>
                     <p>Le personnel est très accueillant et professionnel. Ils ont traité ma réservation rapidement et efficacement. La voiture elle-même était en excellent état et propre à l'intérieur et à l'extérieur. Elle correspondait parfaitement à la description qui m'avait été donnée lors de la réservation.  </p>
                 </div>
                 <div class="box_avis">
-                    <img class="img_avis" src="../assets/img/img_femme.jpeg" alt="">
                     <h3>Vanina G.</h3>
                     <p>J'ai récemment eu une expérience très positive avec MartiCar lors de ma récente location de voiture pour un voyage d'affaires. Le processus de réservation en ligne était simple et intuitif, ce qui m'a permis de sélectionner facilement le véhicule qui correspondait le mieux à mes besoins.</p>
                 </div>
                 <div class="box_avis">
-                    <img class="img_avis" src="../assets/img/Antoine.png" alt="">
                     <h3>Antoine D.</h3>
                     <p>Lorsque je suis arrivé au bureau de MartiCar pour récupérer ma voiture de location, j'ai été chaleureusement accueilli par un personnel courtois et professionnel. Ils ont rapidement traité ma réservation et ont pris le temps de répondre à toutes mes questions concernant le contrat de location et les détails du véhicule.</p>
                 </div>
@@ -149,31 +159,10 @@
 
         <section class="video" id="video">
             <article class="video_presentation">
-                <h2>Qui sommes-nous ?</h2>
+                <h2>Média</h2>
                 <video src="../assets/vidéo/Spot%20TV%20SIXT%202023%20Boostez%20vos%20émotions%20-%20La%20pause%20déjeuner.mp4" controls></video>
             </article>
         </section>
-
-    <!-- ------------------------------------ Contact ------------------------------------------ -->
-
-       <section class="contact" id="contact">
-           <article class="contact_formulaire">
-               <h3>Contactez-nous</h3>
-               <form method="post" action="backend/traitement">
-                   <label for="name" class="hidden">Nom</label>
-                   <input type="text" name="name" id="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50"/>
-                   <label for="email" class="hidden">Email</label>
-                   <input type="email" name="email" id="email" placeholder="Entrez votre email" required minlength="10" maxlength="50"/>
-                   <label for="phone" class="hidden">Number</label>
-                   <input type="tel" name="phone" id="phone" placeholder="Entrez votre numéro de téléphone" required/>
-                   <label for="subject" class="hidden">Email</label>
-                   <input type="text" name="subject" id="subject" placeholder="Entrez le sujet" required/>
-                   <label for="textarea" class="hidden">Zone de texte</label>
-                   <textarea name="textarea" id="textarea" placeholder="Entrez votre message" required></textarea>
-                   <input type="submit" name ="" class ="btn_contact">
-               </form>
-           </article>
-       </section>
 
     <!-- ------------------------------------- Footer ------------------------------------------ -->
 
@@ -181,10 +170,9 @@
             <article class="footer">
                 <h2>MartiCar</h2>
                 <ul class="footerlink">
-                    <li class="link"><a href="#">Accueil</a></li>
-                    <li class="link"><a href="./a_propos">A propos</a></li>
                     <li class="link"><a href="./citadines.html">Citadines</a></li>
                     <li class="link"><a href="./voiture_de_luxe.html">Voitures de luxe</a></li>
+                    <li class="link"><a href="./contact.html">Contact</a></li>
                     <li class="link"><a href="./connexion.html">Connexion</a></li>
                 </ul>
                 <p>&copy; 2024 MartiCar. Tous droits réservés.</p>
