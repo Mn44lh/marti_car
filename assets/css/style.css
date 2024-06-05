@@ -13,7 +13,7 @@ html {
 body{
     font-family: 'Poppins', sans-serif;
     color: antiquewhite;
-    background: rgb(33, 27, 39);;
+    background: rgb(33, 27, 39);
 }
 
 
@@ -74,6 +74,61 @@ nav
     color: rgb(199, 162, 4);
     transition: 0.3s ease-in-out;
     backdrop-filter: blur(5px);
+}
+
+.checkbtn {
+    display: none;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+.checkbtn img {
+    width: 24px;
+    height: 24px;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .checkbtn {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    right: -250px;
+    width: 250px;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to top, transparent, #000);
+    transition: right 0.3s;
+    padding-top: 60px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#check:checked ~ .sidebar {
+    right: 0;
+}
+
+#check:checked ~ .checkbtn img {
+    display: none;
 }
 
 /* ---------- Présentation ---------- */
@@ -169,7 +224,7 @@ h1>span {
     color: white;
     font-size: 1rem;
 }
- .btn_reservation {
+.btn_reservation {
     margin-top: 1rem;
     width: 100%;
      padding: 10px 35px;
@@ -230,46 +285,32 @@ h1>span {
 }
 .type_conteneur {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10rem;
-    margin: 2rem 6rem;
-    padding-top: 3rem;
+    justify-content: center;
 }
 .type_conteneur .box_type {
-    flex: 1 1 2rem;
-    position: relative;
-    height: 350px;
-    border-radius: 0.8rem;
-    overflow: hidden;
+    padding: 50px 30px 40px 30px;
+}
+.type_conteneur .box_type h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
 }
 .type_conteneur .box_type img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 0.8rem;
+    margin-top: 50px;
 }
 .type_conteneur .box_type img:hover {
     transform: scale(1.1);
     transition: 0.5s;
 }
 .type_conteneur .box_type h3 {
-    position: absolute;
-    left: 14rem;
-    bottom: 1rem;
-    font-weight: 500;
-    color: #000000;
-    font-size: 1rem;
-    background: rgb(199, 162, 4);
-    padding: 5px;
-    border-radius: 0.5rem;
-}
-.type_conteneur .box_type .btn_c {
-    display: flex;
-    justify-content: center;
-}
-.type_conteneur .box_type .btn_vdl {
-    display: flex;
-    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
 }
 
 /* ---------- Avis clients ---------- */
@@ -296,13 +337,8 @@ h1>span {
     margin-left: 55px;
     margin-right: 40px;
 }
-.box_avis img {
-    width: 40%;
-    height: 50%;
-    border-radius: 15%;
-    align-content: center;
-    color: white;
-    margin-bottom: 25px;
+.box_avis h3 {
+    color: rgb(199, 162, 4);
 }
 .box_avis p {
     margin-top: 15px;
@@ -311,87 +347,17 @@ h1>span {
 /* ---------- Vidéo ---------- */
 
 .video {
-    padding-top: 85px;
     text-align: center;
     background-color: #000000;
+    padding-top: 75px;
 }
 .video_presentation h2 {
     font-size: 2rem;
-    color: rgb(199, 162, 4);
 }
 .video video {
     align-content: center;
     height: 500px;
     margin-top: 75px;
-}
-
-/* ---------- Contact ---------- */
-
-.contact {
-    background-color: black;
-    padding: 85px 0;
-}
-.contact_formulaire {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-.hidden {
-    display: none;
-}
-.contact_formulaire h3 {
-    font-size: 2rem;
-    color: rgb(33, 27, 39);
-    margin-top: 45px;
-}
-.contact_formulaire form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 600px;
-    margin-top: 30px;
-}
-.contact_formulaire form input {
-    width: 47%;
-
-}
-.contact_formulaire form input,
-.contact_formulaire form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid rgb(199, 162, 4);
-    transition: 0.2s;
-}
-.contact_formulaire form textarea {
-    width: 100%;
-    resize: none;
-    height: 100px;
-    margin-bottom: 35px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.contact_formulaire form .btn_contact {
-    width: 192px;
-    height: 50px;
-    border-radius: 8px;
-    border: none;
-    background-color: rgb(199, 162, 4);
-    color: rgb(33, 27, 39);
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    outline: none;
-    margin: 0 auto 25px auto;
 }
 
 /* ---------- Footer ---------- */
@@ -487,30 +453,27 @@ h1>span {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-     object-fit: cover;
+    object-fit: cover;
     object-position: center;
-}
-.service_container .box_service p {
-    padding: 0 5px;
-    border: 1px solid;
-    width: 18%;
-    border-radius: 0.5rem;
-    margin: 1rem 0 1rem;
-    color: rgb(255, 204, 2);
 }
 .service_container .box_service h4 {
     font-weight: 500;
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
 }
 .service_container .box_service h3 {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0.2rem 0 0.5rem;
     color: rgb(255, 204, 2);
+    text-align: center;
 }
 .service_container .box_service h3 span {
     font-size: 0.7rem;
     font-weight: 500;
     color: #ffffff;
+    text-align: center;
 }
 .service_container .box_service .btn_service {
     display: flex;
@@ -541,14 +504,13 @@ h1>span {
 }
 .service_containers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    gap: 4rem;
     margin: 50px 45px;
 }
 .service_containers .box_services {
-    padding: 7px;
+    padding: 10px;
     border-radius: 1rem;
-    box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
     background:#000000;
 }
 .service_containers .box_services .box_service_imgs {
@@ -562,27 +524,24 @@ h1>span {
     object-fit: cover;
     object-position: center;
 }
-.service_containers .box_services p {
-    padding: 0 5px;
-    border: 1px solid;
-    width: 18%;
-    border-radius: 0.5rem;
-    margin: 1rem 0 1rem;
-    color: rgb(255, 204, 2);
-}
 .service_containers .box_services h4 {
     font-weight: 500;
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
 }
 .service_containers .box_services h3 {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0.2rem 0 0.5rem;
     color: rgb(255, 204, 2);
+    text-align: center;
 }
 .service_containers .box_services h3 span {
     font-size: 0.7rem;
     font-weight: 500;
     color: #ffffff;
+    text-align: center;
 }
 .service_containers .box_services .btn_services {
     display: flex;
@@ -598,6 +557,126 @@ h1>span {
     font-weight: bold;
 }
 
+/* ---------- Page Contact ---------- */
+/* ---------- Service client ---------- */
+
+.sup_client {
+    margin-top: 120px;
+}
+.sup_client h2 {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+.sup_client h4 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+.sup_client p {
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* ---------- Formulaire de contact ---------- */
+
+.contact {
+    background-color: rgb(33, 27, 39);
+    padding: 85px 0;
+}
+.contact_formulaire {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.hidden {
+    display: none;
+}
+.contact_formulaire h3 {
+    font-size: 2rem;
+    color: rgb(33, 27, 39);
+    margin-top: 45px;
+}
+.contact_formulaire form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+    margin-top: 30px;
+}
+.contact_formulaire form input {
+    width: 47%;
+
+}
+.contact_formulaire form input,
+.contact_formulaire form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(199, 162, 4);
+    transition: 0.2s;
+}
+.contact_formulaire form textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact_formulaire form .btn_contact {
+    width: 192px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(199, 162, 4);
+    color: rgb(33, 27, 39);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto 25px auto;
+}
+
+/* ---------- Footer Contact ---------- */
+
+.footer_c {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer_c h2 {
+    text-align: center;
+}
+.footerlink_c {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.footerlink_c .link  {
+    display: inline-block;
+    margin: 20px 10px;
+}
+.footerlink_c .link a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(199, 162, 4);
+}
+.footer_c p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ---------- Page Connexion ---------- */
 /* ---------- Login ---------- */
 
 .connexion {
@@ -621,7 +700,7 @@ h1>span {
 .connexion_container {
     position: relative;
     z-index: 1;
-    background-color: rgba(20, 16, 27, 0.8); /* Ajouter une transparence pour le conteneur */
+    background-color: rgba(20, 16, 27, 0.8);
     padding: 50px;
     border-radius: 10px;
     box-shadow: -20px 20px 10px 5px rgba(0, 0, 0, 0.5);
@@ -660,4 +739,109 @@ h1>span {
 }
 .btn_connexion:hover {
     background: rgb(199, 162, 4);
+}
+
+.footer_co {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer_co h2 {
+    text-align: center;
+}
+.footerlink_co {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.footerlink_co .link  {
+    display: inline-block;
+    margin: 20px 10px;
+}
+.footerlink_co .link a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(199, 162, 4);
+}
+.footer_co p{
+    text-align: center;
+    margin-top: 20px;
+}
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 1150px) {
+    .contact_formulaire {
+        width: 900px;
+    }
+    .service_containers .box_services p {
+        width: 12%;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .contact_formulaire {
+        width: 700px;
+    }
+    .navbarlink {
+        display: none;
+    }
+    .checkbtn {
+        display: block;
+    }
+    .video video {
+        height: 400px;
+    }
+    .service_containers .box_services p {
+        width: 13%;
+    }
+}
+@media screen and (max-width: 990px) {
+    .service_containers .box_services p {
+        width: 15%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .service_containers .box_services p {
+        width: 17%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .contact_formulaire {
+        width: 500px;
+    }
+    .video video {
+        height: 300px;
+    }
+    .service_containers .box_services p {
+        width: 19%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .contact_formulaire {
+        width: 300px;
+    }
+    .video video {
+        height: 220px;
+    }
+}
+@media screen and (max-width: 450px) {
+    h1 {
+        z-index: 1;
+        bottom: 0;
+        position: absolute;
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        color: rgb(255, 255, 255);
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    h1>span {
+        color: rgb(255, 204, 0);
+        font-size: 2.5rem;
+    }
+    .contact_formulaire {
+        width: 150px;
+    }
+    .video video {
+        height: 150px;
+    }
 }
