@@ -389,36 +389,6 @@ h1>span {
     margin-top: 20px;
 }
 
-/* ---------- Footer citadines et voitures de luxe ---------- */
-
-
-.footers {
-    background-color: #000000;
-    text-align: center;
-    padding: 20px 0;
-}
-.footers h2 {
-    text-align: center;
-}
-.footerlinks {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-}
-.footerlinks .link  {
-    display: inline-block;
-    margin: 20px 10px;
-}
-.footerlinks .link a {
-    text-align: center;
-    text-decoration: none;
-    color: rgb(199, 162, 4);
-}
-.footers p{
-    text-align: center;
-    margin-top: 20px;
-}
-
 /* ---------- Citadines ---------- */
 
 .service {
@@ -488,6 +458,32 @@ h1>span {
     transition: transform 0.3s ease-in-out;
     font-weight: bold;
 }
+.footers {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+.footers h2 {
+    text-align: center;
+}
+.footerlinks {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.footerlinks .link  {
+    display: inline-block;
+    margin: 20px 10px;
+}
+.footerlinks .link a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(199, 162, 4);
+}
+.footers p{
+    text-align: center;
+    margin-top: 20px;
+}
 
 /* ---------- Voitures de luxe ---------- */
 
@@ -555,6 +551,32 @@ h1>span {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
     font-weight: bold;
+}
+.footers {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+}
+.footers h2 {
+    text-align: center;
+}
+.footerlinks {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.footerlinks .link  {
+    display: inline-block;
+    margin: 20px 10px;
+}
+.footerlinks .link a {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(199, 162, 4);
+}
+.footers p{
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* ---------- Page Contact ---------- */
