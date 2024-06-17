@@ -824,6 +824,10 @@ h1>span {
     }
 }
 @media screen and (max-width: 450px) {
+    nav
+    {
+        padding: 30px 10px;
+    }
     h1 {
         z-index: 1;
         bottom: 0;
